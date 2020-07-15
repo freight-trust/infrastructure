@@ -1,0 +1,55 @@
+#######################################################################################################
+#
+#   Conformance Pack:
+#    Hyperledger Besu Conformance Pack with AWS Config Rules
+#
+#    Please See Omnibus Documentation or Contact support@freight.zendesk.com
+# 
+#######################################################################################################
+       
+Parameters:
+  CustomConfigRuleLambdaArn:
+    Description: The ARN of the Hyperledger Besu Config Lambda.
+    Type: String
+Resources:
+  CustomRuleForHyperledgerBesu:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: "CustomRuleForHyperledgerBesu"
+      Scope:
+        ComplianceResourceTypes:
+          - "AWS::EC2::Volume"
+      Source:
+        Owner: "BESU_LAMBDA"
+        SourceDetails:
+          -
+            EventSource: "aws.config"
+            MessageType: "ConfigurationItemChangeNotification"
+          -
+            EventSource: "aws.config"
+            MessageType: "OversizedConfigurationItemChangeNotification"
+        SourceIdentifier:
+          Ref: CustomConfigRuleLambdaArn
+  ConfigRuleForVolumeTagsBesu:
+    Type: AWS::Config::ConfigRule
+    Description: "Tag Besu Volumes"
+    Properties:
+      ConfigRuleName: "ConfigRuleForVolumeTagsBesu"
+      InputParameters:
+        tag1Key: CostCenter
+      Scope:
+        ComplianceResourceTypes:
+          - "AWS::EC2::Volume"
+      Source:
+        Owner: AWS
+        SourceIdentifier: "REQUIRED_TAGS"
+  CloudTrailEnabled:
+    Type: AWS::Config::ConfigRule
+    Description: "CloudTrail Rule for Blockchain Monitoring"
+    Properties:
+      ConfigRuleName: "CloudTrailEnabled"
+      InputParameters:
+        s3BucketName: testBucketName
+      Source:
+        Owner: AWS
+        SourceIdentifier: "CLOUD_TRAIL_ENABLED"
