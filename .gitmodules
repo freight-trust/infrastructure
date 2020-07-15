@@ -1,0 +1,3 @@
+[submodule "site/infra-docs/themes/docter"]
+	path = site/infra-docs/themes/docter
+	url = https://gitlab.com/edavidaja/docter.git
