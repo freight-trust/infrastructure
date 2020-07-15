@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "stream": {
+      "description": "The ID of the Event Stream to which this Subscription delivers messages",
+      "type": "string"
+    },
+    "fromBlock": {
+      "description": "The first block from which to deliver messages - use 'latest' to subscribe from the current block",
+      "type": "string"
+    }
+  }
+}

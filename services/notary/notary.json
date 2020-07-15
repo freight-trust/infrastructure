@@ -1,0 +1,47 @@
+{
+  "server": {
+    "http_addr": ":4443",
+    "tls_key_file": "./fixtures/notary-server.key",
+    "tls_cert_file": "./fixtures/notary-server.crt"
+  },
+  "trust-service": {
+    "type": "remote",
+    "hostname": "notarysigner",
+    "port": "7899",
+    "key_algorithm": "ecdsa",
+    "tls_ca_file": "./fixtures/root-ca.crt",
+    "tls_client_cert": "./fixtures/notary-server.crt",
+    "tls_client_key": "./fixtures/notary-server.key"
+  },
+  "storage": {
+    "backend": "memory",
+    "db_url": "user:pass@tcp"
+  },
+  "auth": {
+    "type": "token",
+    "options": {
+      "realm": "https://auth.docker.io/token",
+      "service": "notary-server",
+      "issuer": "auth.docker.io",
+      "rootcertbundle": "/path/to/auth.docker.io/cert"
+    }
+  },
+  "logging": {
+    "level": "info"
+  },
+  "reporting": {
+    "bugsnag": {
+      "api_key": "$bugsnag_apikey",
+      "release_stage": "production"
+    }
+  },
+  "caching": {
+    "max_age": {
+      "current_metadata": 300,
+      "consistent_metadata": 31536000,
+    }
+  },
+  "repositories": {
+    "gun_prefixes": ["docker.io/", "bintray.freightlayer.io", "docker.freighttrust.com"]
+  }
+}
