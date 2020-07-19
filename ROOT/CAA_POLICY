@@ -1,0 +1,32 @@
+Generic
+For Google Cloud DNS, Route 53, DNSimple, and other hosted DNS services
+
+Name	Type	Value
+freighttrust.com.	CAA	0 issue "digicert.com"
+0 issue "letsencrypt.org"
+0 issue "sectigo.com"
+0 iodef "mailto:admin@freighttrust.com"
+Standard Zone File
+For BIND ≥9.9.6, PowerDNS ≥4.0.0, NSD ≥4.0.1, Knot DNS ≥2.2.0
+
+freighttrust.com.	IN	CAA	0 issue "digicert.com"
+freighttrust.com.	IN	CAA	0 issue "letsencrypt.org"
+freighttrust.com.	IN	CAA	0 issue "sectigo.com"
+freighttrust.com.	IN	CAA	0 iodef "mailto:admin@freighttrust.com"
+Legacy Zone File (RFC 3597 Syntax)
+For BIND <9.9.6, NSD <4.0.1, Windows Server 2016
+
+freighttrust.com.	IN	TYPE257	\# 19 0005697373756564696769636572742E636F6D
+freighttrust.com.	IN	TYPE257	\# 22 000569737375656C657473656E63727970742E6F7267
+freighttrust.com.	IN	TYPE257	\# 18 000569737375657365637469676F2E636F6D
+freighttrust.com.	IN	TYPE257	\# 36 0005696F6465666D61696C746F3A61646D696E406672656967687474727573742E636F6D
+tinydns
+:freighttrust.com:257:\000\005\151\163\163\165\145\144\151\147\151\143\145\162\164\056\143\157\155
+:freighttrust.com:257:\000\005\151\163\163\165\145\154\145\164\163\145\156\143\162\171\160\164\056\157\162\147
+:freighttrust.com:257:\000\005\151\163\163\165\145\163\145\143\164\151\147\157\056\143\157\155
+:freighttrust.com:257:\000\005\151\157\144\145\146\155\141\151\154\164\157\072\141\144\155\151\156\100\146\162\145\151\147\150\164\164\162\165\163\164\056\143\157\155
+dnsmasq
+--dns-rr=freighttrust.com,257,0005697373756564696769636572742E636F6D
+--dns-rr=freighttrust.com,257,000569737375656C657473656E63727970742E6F7267
+--dns-rr=freighttrust.com,257,000569737375657365637469676F2E636F6D
+--dns-rr=freighttrust.com,257,0005696F6465666D61696C746F3A61646D696E406672656967687474727573742E636F6D

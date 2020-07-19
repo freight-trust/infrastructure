@@ -1,0 +1,25 @@
+Schema: factory-2019-04-01
+Products:
+  - Name: "Hyperledger Besu"
+    Owner: "admin@freighttrust.com"
+    Description: "Enables AWS Config"
+    Distributor: "cloud-engineering"
+    SupportDescription: "Speak to data-governance@example.com about exceptions and speak to cloud-engineering@example.com about implementation issues"
+    SupportEmail: "support@freight.zendesk.com"
+    SupportUrl: "freight.zendesk.com"
+    Tags:
+      - Key: "blockchain"
+        Value: "network"
+      - Key: "hyperledger"
+        Value: "besu"
+      - Key: "smart-contract"
+        Value: "network"
+    Versions:
+      - Name: "v1"
+        Description: "v1 of aws-hyperledger-besu-config"
+        Active: True
+        Source:
+          Provider: "CodeCommit"
+          Configuration:
+            RepositoryName: "aws-hyperledger-besu"
+            BranchName: "1.5"

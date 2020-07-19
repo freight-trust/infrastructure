@@ -1,0 +1,661 @@
+schemas:
+    certificates:
+      type: object
+      properties:
+        Name:
+          description: The name of the certificate file.
+          type: string
+        Data:
+          description: The base-64 encoded contents of the certificate file.
+          type: string
+        StoreType:
+          description: The store type.
+          type: string
+        Subject:
+          description: The certificate subject.
+          type: string
+        Issuer:
+          description: The issuer of the certificate.
+          type: string
+        IssuedTo:
+          description: The common name of certificate subject.
+          type: string
+        IssuedBy:
+          description: The common name of certificate issuer.
+          type: string
+        EffectiveDate:
+          description: The effective date of the certificate.
+          type: string
+        ExpirationDate:
+          description: The expiration date of the certificate.
+          type: string
+        ExpirationDays:
+          description: The days until the expiration date of the certificate.
+          type: integer
+          format: int32
+        Serialnumber:
+          description: The serial number of the certificate.
+          type: string
+        Thumbprint:
+          description: The SHA1 thumbprint of the certificate.
+          type: string
+        Keysize:
+          description: The key size of the certificate.
+          type: string
+        SignatureAlgorithm:
+          description: The algorithm used to sign the certificate.
+          type: string
+        ConnectorId:
+          description: The Id of the connector configured to use the certificate.
+          type: string
+        PortId:
+          description: The Id of the port configured to use the certificate.
+          type: string
+      required:
+        - Name
+    connectors:
+      type: object
+      properties:
+        ConnectorId:
+          description: The id of the connector.
+          type: string
+        Workspace:
+          description: The workspace of the connector.
+          type: string
+        ConnectorType:
+          description: The type of the connector.
+          type: string
+        ParentConnector:
+          description: The parent connector separated by a comma.
+          type: string
+      required:
+        - ConnectorId
+    files:
+      type: object
+      properties:
+        ConnectorId:
+          description: The id of the connector.
+          type: string
+        PortId:
+          description: The id of the port.
+          type: string
+        Folder:
+          description: The folder of the file.
+          type: string
+        Filename:
+          description: The name of the file.
+          type: string
+        MessageId:
+          description: >-
+            The message id of the file. This will only have a value if the file
+            is a message.
+          type: string
+        Subfolder:
+          description: The subfolder of the file.
+          type: string
+        TimeCreated:
+          description: The time the file was created.
+          type: string
+          format: date-time
+        FilePath:
+          description: The full path to the file.
+          type: string
+        FileSize:
+          description: The size of the file.
+          type: integer
+          format: int32
+        Content:
+          description: >-
+            The Base64 encode file contents. This will only be returned when a
+            specific file is requested. This field cannot be used when filtering
+            results using the $filter parameter.
+          type: string
+      required:
+        - ConnectorId
+        - Folder
+        - Filename
+        - MessageId
+    logs:
+      type: object
+      properties:
+        Id:
+          description: The Id of the log message.
+          type: string
+        Type:
+          description: The type of the log message.
+          type: string
+        Timestamp:
+          description: The time when the event occurred.
+          type: string
+          format: date-time
+        Script:
+          description: The app causing the error.
+          type: string
+        Message:
+          description: The message.
+          type: string
+      required:
+        - Id
+    ports:
+      type: object
+      properties:
+        PortId:
+          description: The id of the port.
+          type: string
+        Workspace:
+          description: The workspace of the port.
+          type: string
+        PortType:
+          description: The type of the port.
+          type: string
+        ParentPort:
+          description: The parent ports separated by a comma.
+          type: string
+      required:
+        - PortId
+    profile:
+      type: object
+      properties:
+        HeartbeatInterval:
+          description: >-
+            The interval in which the application will perform scheduled tasks
+            such as sending files to your trading partners.
+          type: integer
+          format: int32
+        NotifyEmail:
+          description: >-
+            Send an email to the specified email addresses when an error is
+            encountered.
+          type: string
+        NotifyEmailFrom:
+          description: The sender of notification emails.
+          type: string
+        NotifyEmailTo:
+          description: The receiver of notification emails.
+          type: string
+        NotifyEmailSubject:
+          description: The subject of notification emails.
+          type: string
+        SMTPServer:
+          description: The host name or IP address of your SMTP server.
+          type: string
+        SMTPUser:
+          description: The username to authenticate to your SMTP server.
+          type: string
+        SMTPPassword:
+          description: The password to authenticate to your SMTP server.
+          type: string
+        SMTPPort:
+          description: The port of your SMTP server.
+          type: string
+        SMTPSSLMode:
+          description: The SSL mode of your SMTP server.
+          type: string
+        SendStatusReport:
+          description: Send a status report to the email address .
+          type: boolean
+        SendReportInterval:
+          description: The interval of send a status report to the email address.
+          type: string
+        NotifyWindowsEvent:
+          description: Write error messages to the Windows Application Event Log.
+          type: boolean
+        NotifyStopStart:
+          description: Log when the application starts and stops in the event log.
+          type: boolean
+        ProxyType:
+          description: The type of proxy to connect through.
+          type: string
+        ProxyHost:
+          description: The host name or IP address of the proxy.
+          type: string
+        ProxyPort:
+          description: The port of your proxy.
+          type: string
+        ProxyUser:
+          description: The username to use when authenticating to your proxy.
+          type: string
+        ProxyPassword:
+          description: The password to use when authenticating to your proxy.
+          type: string
+        ProxyAuthscheme:
+          description: The auth scheme to use when authenticating to your proxy.
+          type: string
+    requests:
+      type: object
+      properties:
+        Id:
+          description: The Id of the request.
+          type: string
+        Timestamp:
+          description: The time when the request was handled.
+          type: string
+          format: date-time
+        URL:
+          description: The URL of the request.
+          type: string
+        Method:
+          description: The HTTP method.
+          type: string
+        User:
+          description: The user.
+          type: string
+        RemoteIP:
+          description: The remote IP address from the request.
+          type: string
+        Script:
+          description: The script.
+          type: string
+        Bytes:
+          description: The size of the request.
+          type: integer
+          format: int64
+        Time:
+          description: The time of the request.
+          type: integer
+          format: int32
+        Error:
+          description: The error of the request.
+          type: string
+        status:
+          description: The status of the request.
+          type: string
+      required:
+        - Id
+    transactions:
+      type: object
+      properties:
+        Id:
+          description: The id of the logs.
+          type: string
+        ConnectorId:
+          description: The id of the connector.
+          type: string
+        PortId:
+          description: The id of the port.
+          type: string
+        MessageId:
+          description: The message Id.
+          type: string
+        Direction:
+          description: The direction of the file transaction.
+          type: string
+        Status:
+          description: The status of the transaction.
+          type: string
+        Filename:
+          description: The name of the file being transferred.
+          type: string
+        FilePath:
+          description: The full path to the file that was sent or received.
+          type: string
+        FileSize:
+          description: The size of the file.
+          type: integer
+          format: int32
+        Timestamp:
+          description: The time that the file was sent or received.
+          type: string
+          format: date-time
+        ETag:
+          description: >-
+            The ETag for the file being transferred. This is only available when
+            using AS2 Restart.
+          type: string
+      required:
+        - Id
+    workspaces:
+      type: object
+      properties:
+        Workspaceid:
+          description: The Id of the workspace.
+          type: string
+      required:
+        - Workspaceid
+    archiveLogs_input:
+      type: object
+      required:
+        - Age
+      properties:
+        Age:
+          type: string
+          description: >-
+            Minimum file age of the files to be archived, in days. Files more
+            recent than the specified age will not be archived.
+        ConnectorId:
+          type: string
+          description: >-
+            The Id of the connector to be archived. If not set, all connectors
+            will be archived.
+        PortId:
+          type: string
+          description: >-
+            The Id of the Port to be archived. If not set, all ports will be
+            archived.
+        Folder:
+          type: string
+          description: >-
+            Archive directory name. By default, the application will create an
+            'Archive' directory in the connector folder.
+        DeleteTransactions:
+          type: string
+          description: >-
+            If true, entries corresponding to the archived logs will be deleted
+            from the corresponding Transactions table in the database.  Default
+            is true.
+    copyConnector_input:
+      type: object
+      required:
+        - ConnectorId
+        - NewConnectorId
+      properties:
+        ConnectorId:
+          type: string
+          description: The Id of the connector to copy.
+        NewConnectorId:
+          type: string
+          description: The Id of the new connector.
+    copyPort_input:
+      type: object
+      required:
+        - PortId
+        - NewPortId
+      properties:
+        PortId:
+          type: string
+          description: The Id of the port to copy.
+        NewPortId:
+          type: string
+          description: The Id of the new port.
+    createCert_input:
+      type: object
+      required:
+        - Filename
+        - CommonName
+        - Serialnumber
+        - Password
+      properties:
+        Filename:
+          type: string
+          description: The file name.
+        CommonName:
+          type: string
+          description: The common name.
+        Serialnumber:
+          type: string
+          description: The serial number.
+        Password:
+          type: string
+          description: The password.
+        Country:
+          type: string
+          description: The country.
+        Email:
+          type: string
+          description: The email.
+        Expiration:
+          type: string
+          description: The expiration (in years).
+          default: '1'
+        KeySize:
+          type: string
+          description: The key size.
+          default: '2048'
+        PublicKeyType:
+          type: string
+          description: The public key type.
+          default: X.509
+        SignatureAlgorithm:
+          type: string
+          description: The signature algorithm.
+          default: SHA256
+        Locality:
+          type: string
+          description: The locality.
+        Organization:
+          type: string
+          description: The organization.
+        OrganizationalUnit:
+          type: string
+          description: The organizational unit.
+        State:
+          type: string
+          description: The state.
+    createCert_output:
+      type: array
+      items:
+        type: object
+        properties:
+          Name:
+            type: string
+            description: The file name.
+          Password:
+            type: string
+            description: The password.
+          Pubname:
+            type: string
+            description: The public cert file name.
+    deleteLogs_input:
+      type: object
+      properties:
+        TimeStamp:
+          type: string
+          description: >-
+            When set, all logs older than this value will be deleted.  If this
+            field is left empty, all logs will be deleted.
+    deleteTransactions_input:
+      type: object
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the connector.
+        PortId:
+          type: string
+          description: The id of the port.
+        Direction:
+          type: string
+          description: The direction of the file transaction.
+        TimeStamp:
+          type: string
+          description: >-
+            When set, all transaction logs older than this value will be
+            deleted.  If this field is left empty, all logs will be deleted.
+    downloadFile_input:
+      type: object
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the connector. Required.
+        PortId:
+          type: string
+          description: The id of the port.
+        File:
+          type: string
+          description: >-
+            The file to be downloaded. When file is not supplied, all files will
+            be downloaded based on the connector's settings.
+        RemotePath:
+          type: string
+          description: >-
+            The path to overrides the Remote path settings in the connector(Only
+            used for FTP, SFTP)
+    downloadFile_output:
+      type: array
+      items:
+        type: object
+        properties:
+          MessageId:
+            type: string
+            description: The message id of the file.
+          Subfolder:
+            type: string
+            description: The subfolder of the file.
+          File:
+            type: string
+            description: The name of the file.
+          FileSize:
+            type: string
+            description: The size of the file.
+          TimeCreated:
+            type: string
+            description: The time the file was created.
+          ErrorMessage:
+            type: string
+            description: >-
+              When multiple files are transferred over the same connection, this
+              will return the error message if an individual file transfer
+              failed. If this is empty, the file transfer was successful.
+    exchangeCert_input:
+      type: object
+      required:
+        - Certificate
+        - ExchangeType
+      properties:
+        ConnectorId:
+          type: string
+          description: The connector id. Required.
+        PortId:
+          type: string
+          description: The port id.
+        Certificate:
+          type: string
+          description: The certificate to exchange.
+        ExchangeType:
+          type: string
+          description: >-
+            The exchange type. Validate values are AS2(Request, Response),
+            OFTP(Deliver, Request, Replace)
+        CertificatePassword:
+          type: string
+          description: The password of certificate(AS2).
+        CertificateUsage:
+          type: string
+          description: >-
+            The cryptographic function(s) for the certificate. Validate values
+            are 'Encryption,Verification,ServerTLS,ClientTLS'(AS2).
+        ResponseURL:
+          type: string
+          description: The URL which the response should be sent(AS2).
+    getTransactionLogs_input:
+      type: object
+      required:
+        - MessageId
+        - Direction
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the connector. Required.
+        PortId:
+          type: string
+          description: The id of the port.
+        MessageId:
+          type: string
+          description: The message Id.
+        Direction:
+          type: string
+          description: The direction of the transaction.
+        Type:
+          type: string
+          description: The type of the log file.
+        IncludeContent:
+          type: string
+          description: Whether to return the content of the log file.
+          default: 'False'
+    getTransactionLogs_output:
+      type: array
+      items:
+        type: object
+        properties:
+          TimeCreated:
+            type: string
+            description: The time the log file was created.
+          Type:
+            type: string
+            description: The type of the log file.
+          File:
+            type: string
+            description: The name of the log file.
+          Path:
+            type: string
+            description: The path of the log file.
+          Content:
+            type: string
+            description: The Base64 encoded content of the log file.
+    importProfiles_input:
+      type: object
+      properties:
+        DataDirectory:
+          type: string
+          description: The data directory or a zipped file where the profiles are stored.
+        Workspace:
+          type: string
+          description: The name of the workspace.
+        InputName:
+          type: string
+          description: The name of the form input when uploading files from a form.
+        DuplicateAction:
+          type: string
+          description: >-
+            This setting determines how to handle profiles that already exist
+            during an import.
+          default: Overwrite
+        IncludeDirectories:
+          type: string
+          description: Whether to retain directories on non-default locations.
+          default: 'False'
+    refreshTransactions_input:
+      type: object
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the connector. Required
+        PortId:
+          type: string
+          description: The id of the port.
+    refreshTransactions_output:
+      type: array
+      items:
+        type: object
+        properties:
+          Result:
+            type: string
+            description: The result of rebuilding the transactions cache.
+    restartFile_input:
+      type: object
+      required:
+        - Filename
+        - etag
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the partner/connector. Required.
+        PortId:
+          type: string
+          description: The id of the partner/port.
+        Filename:
+          type: string
+          description: The file name.
+        etag:
+          type: string
+          description: The ETag.
+    sendFile_input:
+      type: object
+      properties:
+        ConnectorId:
+          type: string
+          description: The id of the connector. Required.
+        PortId:
+          type: string
+          description: The id of the port.
+        File:
+          type: string
+          description: The file name.
+        Subfolder:
+          type: string
+          description: The subfolder of the file.
+        'Attachment#':
+          type: string
+          description: The attachment file.
+        FormatResult:
+          type: string
+          description: Is format result.

@@ -1,0 +1,33 @@
+---
+- !user alice
+- !user bob
+- !user carol
+- !user dan
+- !user erin
+- !group aardvark
+- !group bobcat
+- !group caribou
+- !grant
+  role: !group aardvark
+  members:
+    - !user alice
+    - !user bob
+    - !user carol
+    - !user dan
+    - !user erin
+- !grant
+  role: !group bobcat
+  members:
+    - !user alice
+    - !user bob
+    - !user carol
+    - !user dan
+    - !user erin
+- !grant
+  role: !group caribou
+  members:
+    - !user alice
+    - !user bob
+    - !user carol
+    - !user dan
+    - !user erin
