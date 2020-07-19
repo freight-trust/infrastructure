@@ -2,27 +2,40 @@
 
 > Infrastructure and Base Configuration Files
 
-### Overview
+[ref/component](/com/freighttrust)
+[policy/component](/com/freighttrust/policy)
+[schemas/component](/com/freighttrust/schemas)
 
-```markdown
-Syntax highlighted code block
+### Structure 
+* ROOT
+	- [CAA_POLICY](/ROOT/CAA_POLICY)
+	- [DNSSEC](/ROOT/DNSSEC)
+	- [MX](ROOT/MX)
+	- CNMAE
+	- DKIM
+	- ALIAS
+	- DNSZONE
 
-# Root
-## directory
-### folder
+* com
+	- freighttrust
+		- schemas
+		- policy
+			- besu
+			- network
+			- availability
+		- service
 
-- Provider
-- Service
+* security
+	- [defects](/security/defects.md)
+	- [document retention policy](/security/document-retention-policy.md)
+	- [pki](/security/pki.md)
 
-1. Namespace
-  a. Attribute
-
-**Convention** and _Configuration_ and `Code` text
-
-[ref/component](url) and ![define/component](src)
-```
 
 ### Support or Contact
 
 support@freight.zendesk.com
 
+
+## License 
+
+MIT
