@@ -1,0 +1,47 @@
+- enabled: false
+  name: google-java-format
+  image: restyled/restyler-google-java-format:v1.6
+  command:
+    - google-java-format
+    - "--replace"
+  arguments: []
+  include:
+    - "**/*.java"
+  interpreters: []
+  supports_arg_sep: false
+  supports_multiple_paths: true
+  documentation:
+    - https://github.com/google/google-java-format#readme
+- enabled: true
+  name: terraform
+  image: restyled/restyler-terraform:v0.12.24
+  command:
+    - terraform
+    - fmt
+  arguments: []
+  include:
+    - "**/*.tf"
+  interpreters: []
+  supports_arg_sep: true
+  supports_multiple_paths: false
+  documentation:
+    - https://www.terraform.io/docs/commands/fmt.html
+- enabled: true
+  name: whitespace
+  image: restyled/restyler-whitespace:v0.1.0.0-2
+  command:
+    - whitespace
+  arguments: []
+  include:
+    - "**/*"
+    - "!**/*.gif"
+    - "!**/*.ico"
+    - "!**/*.jpeg"
+    - "!**/*.jpg"
+    - "!**/*.pdf"
+    - "!**/*.png"
+  interpreters: []
+  supports_arg_sep: true
+  supports_multiple_paths: true
+  documentation:
+    - https://github.com/restyled-io/restylers/blob/master/whitespace/README.md
