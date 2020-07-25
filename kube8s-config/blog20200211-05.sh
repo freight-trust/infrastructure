@@ -1,0 +1,1 @@
+$ kubectl apply -f app.yaml -f app-service.yaml -f ingress.yaml
