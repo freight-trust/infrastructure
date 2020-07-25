@@ -1,6 +1,6 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026804 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026810 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -38,4 +38,6 @@ freighttrust.com. 3600 IN CAA 0 issue "netlify.com"
 docs.freighttrust.com. 3600 IN TXT "ALIAS for ft-docs.netlify.app"
 www.freighttrust.com. 3600 IN CNAME freighttrust.netlify.app.
 google._domainkey.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhjdQvipxP/rabW99vi+Aeu0SjVFlqprhJKSRWaa8yj/18Le6VpseGKiAp0E1leiezU/Sq5ZERT6qN6sRVVKYqbKeSs9tDU2sxksn9Ts1CgN3i16UWAnKiXopDEKsFq5yNdgZkWlkFspoUpKAy891UVznMUkyxqzoHudnXq27oQp266Ai8FQ57tGg5hgkA2eoVzzBO+ppl5NbrCH4F1gADuppE8Pthr6/Rp5suxZDbPnaDHPHPZ+mddJ6lZBACYYpc+P+hNe+x1/VcVmkiW51a7Jji+rkY67OlBMBzyBLi/GPd6r5IJIo8zQgoUu22d3c6wzJLmwDrZ2m0w0ylYot1QIDAQAB"
-_dmarc.freighttrust.com. 3600 IN TXT "v=DMARC1; p=reject; sp=quarantine; ruf=mailto:reports@freighttrust.com; rua=mailto:admin@freighttrust.com;"
+_dmarc.freighttrust.com. 3600 IN TXT "v=DMARC1; p=none; pct=100; rua=mailto:re+mdarqvrav5j@dmarc.postmarkapp.com; sp=none; aspf=r;"
+20191028134319pm._domainkey.freighttrust.com. 3600 IN TXT "k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCQGs9IqIvejvm/RtKznQ8lfa2TAq3E850CcZ35R182eebkBGpr43SYRWHrgiGtPuY2vq36IVLkJ5jYP0kjAIWSoArQezdx4Q45QysQX+2ycrjDaHu7OiDhr7O1UBeZJ26fqacTRPKyDYb9BorM6DYThra+CjTJhfU0778NlIq0bwIDAQAB"
+pm-bounces.freighttrust.com. 3600 IN CNAME pm.mtasv.net.
