@@ -1,1 +1,1 @@
-v=DMARC1; p=reject; sp=quarantine; ruf=mailto:reports@freighttrust.com; rua=mailto:reports@freighttrust.com;
+v=DMARC1; p=reject; sp=quarantine; ruf=mailto:reports@freighttrust.com; rua=mailto:admin@freighttrust.com;
