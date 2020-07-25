@@ -1,6 +1,6 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026780 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026786 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -34,3 +34,7 @@ k1._domainkey.freighttrust.com. 3600 IN CNAME dkim.mcsv.net.
 freighttrust.com. 3600 IN A 104.198.14.52
 ; freighttrust.com. 3600 IN ALIAS freighttrust.netlify.app.
 freighttrust.com. 3600 IN TXT "ALIAS for freighttrust.netlify.app"
+freighttrust.com. 3600 IN CAA 0 issue "netlify.com"
+; docs.freighttrust.com. 3600 IN ALIAS ft-docs.netlify.app.
+docs.freighttrust.com. 3600 IN TXT "ALIAS for ft-docs.netlify.app"
+www.freighttrust.com. 3600 IN CNAME freighttrust.netlify.app.

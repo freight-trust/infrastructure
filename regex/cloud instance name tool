@@ -1,0 +1,317 @@
+cloud instance name tool
+^ec2-(ue1|uw1|uw2|ew1|ec1|an1|an2|as1|as2|se1)-([1-2]{1})([a-c]{1})-(d|t|s|p)-([a-z0-9\-]+)$
+
+
+^arn:(?P<IEAn>[^:\n]*):(?P<Service>[^:\n]*):(?P<Region>[^:\n]*):(?P<AccountID>[^:\n]*):(?P<Ignore>(?P<ResourceType>[^:\/\n]*)[:\/])?(?P<Resource>.*)$
+
+# ARN Format Templates
+arn:partition:service:region:account-id:resource
+arn:partition:service:region:account-id:resourcetype:resource
+arn:partition:service:region:account-id:resourcetype/resource
+# Amazon Simple Storage Service (S3)
+arn:aws:s3:::my_corporate_bucket/Development/*
+
+
+
+"
+^arn:(?P<IEAn>[^:\n]*):(?P<Service>[^:\n]*):(?P<Region>[^:\n]*):(?P<AccountID>[^:\n]*):(?P<Ignore>(?P<ResourceType>[^:\/\n]*)[:\/])?(?P<Resource>.*)$
+"
+gm
+^ asserts position at start of a line
+arn: matches the characters arn: literally (case sensitive)
+Named Capture Group IEAn (?P<IEAn>[^:\n]*)
+Match a single character not present in the list below [^:\n]*
+* Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+: matches the character : literally (case sensitive)
+\n matches a line-feed (newline) character (ASCII 10)
+: matches the character : literally (case sensitive)
+Named Capture Group Service (?P<Service>[^:\n]*)
+Match a single character not present in the list below [^:\n]*
+* Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+: matches the character : literally (case sensitive)
+\n matches a line-feed (newline) character (ASCII 10)
+: matches the character : literally (case sensitive)
+Named Capture Group Region (?P<Region>[^:\n]*)
+Match a single character not present in the list below [^:\n]*
+* Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+: matches the character : literally (case sensitive)
+\n matches a line-feed (newline) character (ASCII 10)
+: matches the character : literally (case sensitive)
+Named Capture Group AccountID (?P<AccountID>[^:\n]*)
+Match a single character not present in the list below [^:\n]*
+: matches the character : literally (case sensitive)
+Named Capture Group Ignore (?P<Ignore>(?P<ResourceType>[^:\/\n]*)[:\/])?
+Named Capture Group Resource (?P<Resource>.*)
+$ asserts position at the end of a line
+Global pattern flags
+g modifier: global. All matches (don't return after first match)
+m modifier: multi line. Causes ^ and $ to match the begin/end of each line (not only begin/end of string)
+
+```json
+[
+  [
+    {
+      "content": "arn:partition:service:region:account-id:resource",
+      "isParticipating": true,
+      "groupNum": 0,
+      "groupName": null,
+      "startPos": 23,
+      "endPos": 71
+    },
+    {
+      "content": "partition",
+      "isParticipating": true,
+      "groupNum": 1,
+      "groupName": "IEAn",
+      "startPos": 27,
+      "endPos": 36
+    },
+    {
+      "content": "service",
+      "isParticipating": true,
+      "groupNum": 2,
+      "groupName": "Service",
+      "startPos": 37,
+      "endPos": 44
+    },
+    {
+      "content": "region",
+      "isParticipating": true,
+      "groupNum": 3,
+      "groupName": "Region",
+      "startPos": 45,
+      "endPos": 51
+    },
+    {
+      "content": "account-id",
+      "isParticipating": true,
+      "groupNum": 4,
+      "groupName": "AccountID",
+      "startPos": 52,
+      "endPos": 62
+    },
+    {
+      "content": "",
+      "isParticipating": false,
+      "groupNum": 5,
+      "groupName": "Ignore",
+      "startPos": -1,
+      "endPos": -1
+    },
+    {
+      "content": "",
+      "isParticipating": false,
+      "groupNum": 6,
+      "groupName": "ResourceType",
+      "startPos": -1,
+      "endPos": -1
+    },
+    {
+      "content": "resource",
+      "isParticipating": true,
+      "groupNum": 7,
+      "groupName": "Resource",
+      "startPos": 63,
+      "endPos": 71
+    }
+  ],
+  [
+    {
+      "content": "arn:partition:service:region:account-id:resourcetype:resource",
+      "isParticipating": true,
+      "groupNum": 0,
+      "groupName": null,
+      "startPos": 72,
+      "endPos": 133
+    },
+    {
+      "content": "partition",
+      "isParticipating": true,
+      "groupNum": 1,
+      "groupName": "IEAn",
+      "startPos": 76,
+      "endPos": 85
+    },
+    {
+      "content": "service",
+      "isParticipating": true,
+      "groupNum": 2,
+      "groupName": "Service",
+      "startPos": 86,
+      "endPos": 93
+    },
+    {
+      "content": "region",
+      "isParticipating": true,
+      "groupNum": 3,
+      "groupName": "Region",
+      "startPos": 94,
+      "endPos": 100
+    },
+    {
+      "content": "account-id",
+      "isParticipating": true,
+      "groupNum": 4,
+      "groupName": "AccountID",
+      "startPos": 101,
+      "endPos": 111
+    },
+    {
+      "content": "resourcetype:",
+      "isParticipating": true,
+      "groupNum": 5,
+      "groupName": "Ignore",
+      "startPos": 112,
+      "endPos": 125
+    },
+    {
+      "content": "resourcetype",
+      "isParticipating": true,
+      "groupNum": 6,
+      "groupName": "ResourceType",
+      "startPos": 112,
+      "endPos": 124
+    },
+    {
+      "content": "resource",
+      "isParticipating": true,
+      "groupNum": 7,
+      "groupName": "Resource",
+      "startPos": 125,
+      "endPos": 133
+    }
+  ],
+  [
+    {
+      "content": "arn:partition:service:region:account-id:resourcetype/resource",
+      "isParticipating": true,
+      "groupNum": 0,
+      "groupName": null,
+      "startPos": 134,
+      "endPos": 195
+    },
+    {
+      "content": "partition",
+      "isParticipating": true,
+      "groupNum": 1,
+      "groupName": "IEAn",
+      "startPos": 138,
+      "endPos": 147
+    },
+    {
+      "content": "service",
+      "isParticipating": true,
+      "groupNum": 2,
+      "groupName": "Service",
+      "startPos": 148,
+      "endPos": 155
+    },
+    {
+      "content": "region",
+      "isParticipating": true,
+      "groupNum": 3,
+      "groupName": "Region",
+      "startPos": 156,
+      "endPos": 162
+    },
+    {
+      "content": "account-id",
+      "isParticipating": true,
+      "groupNum": 4,
+      "groupName": "AccountID",
+      "startPos": 163,
+      "endPos": 173
+    },
+    {
+      "content": "resourcetype/",
+      "isParticipating": true,
+      "groupNum": 5,
+      "groupName": "Ignore",
+      "startPos": 174,
+      "endPos": 187
+    },
+    {
+      "content": "resourcetype",
+      "isParticipating": true,
+      "groupNum": 6,
+      "groupName": "ResourceType",
+      "startPos": 174,
+      "endPos": 186
+    },
+    {
+      "content": "resource",
+      "isParticipating": true,
+      "groupNum": 7,
+      "groupName": "Resource",
+      "startPos": 187,
+      "endPos": 195
+    }
+  ],
+  [
+    {
+      "content": "arn:aws:s3:::my_corporate_bucket/Development/*",
+      "isParticipating": true,
+      "groupNum": 0,
+      "groupName": null,
+      "startPos": 233,
+      "endPos": 279
+    },
+    {
+      "content": "aws",
+      "isParticipating": true,
+      "groupNum": 1,
+      "groupName": "IEAn",
+      "startPos": 237,
+      "endPos": 240
+    },
+    {
+      "content": "s3",
+      "isParticipating": true,
+      "groupNum": 2,
+      "groupName": "Service",
+      "startPos": 241,
+      "endPos": 243
+    },
+    {
+      "content": "",
+      "isParticipating": true,
+      "groupNum": 3,
+      "groupName": "Region",
+      "startPos": 244,
+      "endPos": 244
+    },
+    {
+      "content": "",
+      "isParticipating": true,
+      "groupNum": 4,
+      "groupName": "AccountID",
+      "startPos": 245,
+      "endPos": 245
+    },
+    {
+      "content": "my_corporate_bucket/",
+      "isParticipating": true,
+      "groupNum": 5,
+      "groupName": "Ignore",
+      "startPos": 246,
+      "endPos": 266
+    },
+    {
+      "content": "my_corporate_bucket",
+      "isParticipating": true,
+      "groupNum": 6,
+      "groupName": "ResourceType",
+      "startPos": 246,
+      "endPos": 265
+    },
+    {
+      "content": "Development/*",
+      "isParticipating": true,
+      "groupNum": 7,
+      "groupName": "Resource",
+      "startPos": 266,
+      "endPos": 279
+    }
+  ]
+]
+```
