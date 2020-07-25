@@ -1,0 +1,12 @@
+DNS Server Status
+Delegation Information
+Name	Parent zone	Child zone	Authoritative IPs
+Exists?	Glue/additional records	Exists?
+ns1.dnsimple.com	yes	A	162.159.24.4	yes	A	162.159.24.4
+AAAA	2400:cb00:2049:1::a29f:1804	AAAA	2400:cb00:2049:1::a29f:1804
+ns2.dnsimple.com	yes	A	162.159.25.4	yes	A	162.159.25.4
+AAAA	2400:cb00:2049:1::a29f:1904	AAAA	2400:cb00:2049:1::a29f:1904
+ns3.dnsimple.com	yes	A	162.159.26.4	yes	A	162.159.26.4
+AAAA	2400:cb00:2049:1::a29f:1a04	AAAA	2400:cb00:2049:1::a29f:1a04
+ns4.dnsimple.com	yes	A	162.159.27.4	yes	A	162.159.27.4
+AAAA	2400:cb00:2049:1::a29f:1b04
