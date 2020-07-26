@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: app-ingress-internal
+  namespace: default
+  annotations:
+    haproxy.org/ingress.class: "intranet"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /app-service
+        backend:
+          serviceName: app-service-internal
+          servicePort: 80
