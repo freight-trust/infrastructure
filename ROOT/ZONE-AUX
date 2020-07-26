@@ -1,0 +1,40 @@
+$ORIGIN freighttrust.com.
+$TTL 1h
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026786 86400 7200 604800 300
+freighttrust.com. 3600 IN NS ns1.dnsimple.com.
+freighttrust.com. 3600 IN NS ns2.dnsimple.com.
+freighttrust.com. 3600 IN NS ns3.dnsimple.com.
+freighttrust.com. 3600 IN NS ns4.dnsimple.com.
+freighttrust.com. 3600 IN CAA 0 issuewild "digicert.com"
+freighttrust.com. 3600 IN CAA 0 issue "digicert.com"
+mail.freighttrust.com. 3600 IN CNAME ghs.googlehosted.com.
+calendar.freighttrust.com. 3600 IN CNAME ghs.googlehosted.com.
+freighttrust.com. 3600 IN MX 1 aspmx.l.google.com.
+freighttrust.com. 3600 IN MX 5 alt1.aspmx.l.google.com.
+freighttrust.com. 3600 IN MX 5 alt2.aspmx.l.google.com.
+freighttrust.com. 3600 IN MX 10 alt3.aspmx.l.google.com.
+freighttrust.com. 3600 IN MX 10 alt4.aspmx.l.google.com.
+freighttrust.com. 3600 IN SPF v=spf1 a include:_spf.google.com, include:servers.mcsv.net ~all
+freighttrust.com. 3600 IN TXT "v=spf1 a include:_spf.google.com, include:servers.mcsv.net ~all"
+freighttrust.com. 3600 IN CAA 0 iodef ""mailto:admin@freighttrust.com""
+freighttrust.com. 3600 IN CAA 0 issue ""sectigo.com""
+freighttrust.com. 3600 IN CAA 0 issue ""letsencrypt.org""
+freighttrust.com. 3600 IN CAA 0 issue ""digicert.com""
+freighttrust.com. 3600 IN DNSKEY 257 3 8 AwEAAdWfFNsNcvnWwJb1sG3Tv9dosdPHO8a8zq8vcjkAPXzVEnq1leMqCe/L3dKNEFMKFeXDO7CUaRvAZL/ypfsQxKfrzFQ1BJV2HjiQcIdmCVHw4W/hCvGPcpYstJ33O4kSwA6BMrceVBLVkojrY/V5v7shopsxIeRypQVHiTF+0eDLmolLtl2O3kWWVL3yQ7g4cYPuTHaCg8Dg7gUozgEbDs8=
+freighttrust.com. 3600 IN DNSKEY 256 3 8 AwEAAeJP4+f+fo31LbaxPYs1iIfkl9ZvPqyBGTewZ2M801S1R49lOl/mqkveL+NeXuU2Rr10Rb9LxNKF6HDuVkENmKkll3o1Kz/o13WtnOeuNtkAXoSa05pBas2MMZZxtDk9Xjq+kqEJDe/MEbe9cVONkzdtyATDJ7YncM6rtAKM7YbJ
+freighttrust.com. 3600 IN CDNSKEY 257 3 8 AwEAAdWfFNsNcvnWwJb1sG3Tv9dosdPHO8a8zq8vcjkAPXzVEnq1leMqCe/L3dKNEFMKFeXDO7CUaRvAZL/ypfsQxKfrzFQ1BJV2HjiQcIdmCVHw4W/hCvGPcpYstJ33O4kSwA6BMrceVBLVkojrY/V5v7shopsxIeRypQVHiTF+0eDLmolLtl2O3kWWVL3yQ7g4cYPuTHaCg8Dg7gUozgEbDs8=
+freighttrust.com. 3600 IN CDS 29797 8 2 8223769BCAC8C832523440954255DE9AC0F18EF88E12E6FA63B14C0BE8E7B643
+google._domainkey.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh0Kmo9v0sfHUXrWaCL/hU2UV/plsOvxQ2wIOSeQ4Lm7zRnu7sRGIf3XoASHeOTxqwPHoZHuqtxbpbz2Tl6Z1Q+zXGmN0fTvKQBDqJo4WtYswLqXMuFkds7jvWOVuLETTDc/zzclOCNb2XHyKAd6\" \"7bkjZtj/oYA2Ah+M8MrZYN2NTeQMsUEpBQF8uMkNTw56QcEy7vAJBgPBi2991SV20ZG82klv7Q08kYDIE0XNXKfz9LMDMIH7CFwyEndP31Cy9FpMyP+4i52lVmkotYGInS1ADfVmeLLZOXeST/YESsuEWefe3V9NtPN6627u3mrNSE6e0o0hiPgmE+7bjuJ3c+QIDAQAB"
+_dmarc.freighttrust.com. 3600 IN TXT "v=DMARC1; p=none; pct=100; rua=mailto:re+q0erbgvnbxl@dmarc.postmarkapp.com; sp=none; aspf=r;"
+zendesk4.freighttrust.com. 3600 IN CNAME mail4.zendesk.com.
+zendesk3.freighttrust.com. 3600 IN CNAME mail3.zendesk.com.
+zendesk2.freighttrust.com. 3600 IN CNAME mail2.zendesk.com.
+zendesk1.freighttrust.com. 3600 IN CNAME mail1.zendesk.com.
+k1._domainkey.freighttrust.com. 3600 IN CNAME dkim.mcsv.net.
+freighttrust.com. 3600 IN A 104.198.14.52
+; freighttrust.com. 3600 IN ALIAS freighttrust.netlify.app.
+freighttrust.com. 3600 IN TXT "ALIAS for freighttrust.netlify.app"
+freighttrust.com. 3600 IN CAA 0 issue "netlify.com"
+; docs.freighttrust.com. 3600 IN ALIAS ft-docs.netlify.app.
+docs.freighttrust.com. 3600 IN TXT "ALIAS for ft-docs.netlify.app"
+www.freighttrust.com. 3600 IN CNAME freighttrust.netlify.app.

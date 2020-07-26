@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: dev-edit
+  namespace: dev # grants permissions within the "dev" namespace
+subjects:
+- kind: User
+  name: bob # permissions for a user named bob
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: edit # read/write access
+  apiGroup: rbac.authorization.k8s.io

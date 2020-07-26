@@ -1,0 +1,1 @@
+$ kubectl get csr bob -o jsonpath='{.status.certificate}' | base64 --decode > bob.crt
