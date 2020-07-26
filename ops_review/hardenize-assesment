@@ -1,0 +1,35 @@
+
+Name	TTL	Type	Data
+freighttrust.com.    	3600	A	104.198.14.52            
+freighttrust.com.    	3600	AAAA	2604:a880:400:d0:0:0:6d9:d001            
+freighttrust.com.    	3600	AAAA	2604:a880:400:d1:0:0:895:1            
+freighttrust.com.    	3600	CAA	0 issue "digicert.com"            
+freighttrust.com.    	3600	CAA	0 issue "letsencrypt.org"            
+freighttrust.com.    	3600	CAA	0 issue "netlify.com"            
+freighttrust.com.    	3600	CAA	0 issue "sectigo.com"            
+freighttrust.com.    	3600	CAA	0 issuewild "digicert.com"            
+freighttrust.com.    	3600	CAA	0 iodef "mailto:admin@freighttrust.com"            
+freighttrust.com.    	3600	MX	1 aspmx.l.google.com.            
+freighttrust.com.    	3600	MX	5 alt1.aspmx.l.google.com.            
+freighttrust.com.    	3600	MX	5 alt2.aspmx.l.google.com.            
+freighttrust.com.    	3600	MX	10 alt3.aspmx.l.google.com.            
+freighttrust.com.    	3600	MX	10 alt4.aspmx.l.google.com.            
+freighttrust.com.    	3600	TXT	ALIAS for freighttrust.netlify.app            
+freighttrust.com.    	3600	TXT	v=spf1 a include:include:_spf.google.com, include:, include:servers.mcsv.net include:~all ~all            
+freighttrust.com.    	3600	SPF	v=spf1 a include:include:_spf.google.com, include:, include:servers.mcsv.net include:~all ~all            
+_dmarc.freighttrust.com.    	3600	TXT	v=DMARC1; p=reject; sp=quarantine; ruf=mailto:reports@freighttrust.com; rua=mailto:admin@freighttrust.com;            
+_dmarc.freighttrust.com.    	3600	TXT	v=DMARC1; p=none; pct=100; rua=mailto:re+q0erbgvnbxl@dmarc.postmarkapp.com; sp=none; aspf=r;            
+freighttrust.com.    	3600	NS	ns3.dnsimple.com.            
+freighttrust.com.    	3600	NS	ns4.dnsimple.com.            
+freighttrust.com.    	3600	NS	ns1.dnsimple.com.            
+freighttrust.com.    	3600	NS	ns2.dnsimple.com.            
+freighttrust.com.    	3600	SOA	ns1.dnsimple.com. admin.dnsimple.com. 1595026799 86400 7200 604800 300            
+www.freighttrust.com.    	3600	CNAME	freighttrust.netlify.app.            
+freighttrust.netlify.app.    	900	A	157.245.130.6            
+freighttrust.netlify.app.    	900	A	159.65.216.232            
+freighttrust.netlify.app.    	900	AAAA	2604:a880:400:d1:0:0:86d:6001            
+freighttrust.netlify.app.    	900	AAAA	2604:a880:400:d1:0:0:89c:7001            
+mta-sts.freighttrust.netlify.app.    	900	A	162.243.166.170            
+mta-sts.freighttrust.netlify.app.    	900	A	104.248.63.248            
+mta-sts.freighttrust.netlify.app.    	900	AAAA	2604:a880:400:d0:0:0:6d9:d001            
+mta-sts.freighttrust.netlify.app.    	900	AAAA	2604:a880:400:d0:0:0:72a:f001            
