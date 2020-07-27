@@ -1,0 +1,27 @@
+{
+  "base-uri": "'none'",
+  "default-src": ["'self'", "data:", "https:", "rpc:", "wss:"],
+  "style-src": ["'self'", "data:", "https:", "rpc:", "wss:", "'unsafe-inline'"],
+  "script-src": [
+    "'self'",
+    "https://api.freighttrust.com",
+    "https://docs.freighttrust.com",
+    "https://services.freighttrust.com",
+    "https://st.freighttrust.com",
+    "https://haproxy.freighttrust.com",
+    "https://sh.freighttrust.com",
+    "https://capital.freighttrust.com",
+    "https://edi.freighttrust.com",
+    "https://inbound.freighttrust.com",
+    "https://outbound.freighttrust.com",
+    "https://relay.freighttrust.com",
+    "https://api.freighttrust.com",
+    "https://app.intercom.io",
+    "https://assets.freighttrust.com",
+    "https://js.intercomcdn.com",
+    "https://widget.intercom.io",
+    "https://www.google-analytics.com"
+  ],
+  "object-src": "'none'",
+  "block-all-mixed-content": true
+}
