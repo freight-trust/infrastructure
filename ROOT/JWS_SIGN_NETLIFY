@@ -1,0 +1,5 @@
+{
+  "netlify_id": "the site's id in netlify",
+  "site_url": "the site's URL for a given deploy",
+  "context": "the deploy context for this request"
+}

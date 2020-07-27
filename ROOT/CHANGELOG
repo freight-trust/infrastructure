@@ -1,0 +1,22 @@
+# Updates
+
+
+## Incident Report for July 27, 2020 
+Routine Security Check shows that DKIM was not properly authenticating emails on primary domain name.
+
+- Remeidiation 
+Discard existing TXT records 
+Generate new DKIM
+Generate new TXT
+
+- Reference
+```
+Status: Authenticating email
+You must update the DNS records for this domain.
+To start authenticating email for the domain selected above, enter the following DNS TXT record into your domain provider's DNS settings page. Then click "Start authentication."
+DNS Host name (TXT record name):
+google._domainkey
+TXT record value:
+v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB
+```
+
