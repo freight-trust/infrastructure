@@ -1,0 +1,18 @@
+# Postmark
+
+Hostname
+Type
+Add this value
+ 
+DKIM
+Verified
+
+20191028134319pm._domainkey
+TXT
+k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCQGs9IqIvejvm/RtKznQ8lfa2TAq3E850CcZ35R182eebkBGpr43SYRWHrgiGtPuY2vq36IVLkJ5jYP0kjAIWSoArQezdx4Q45QysQX+2ycrjDaHu7OiDhr7O1UBeZJ26fqacTRPKyDYb9BorM6DYThra+CjTJhfU0778NlIq0bwIDAQAB 
+Return-Path
+Verified
+
+pm-bounces 
+CNAME
+pm.mtasv.net
