@@ -1,3 +1,7 @@
+# SPF Records
+
+* Toolchain: [easydmarc](https://easydmarc.com/tools/spf-record-generator/freighttrust.com)
+
 ## Old SPF
 
 v=spf1 a include:"v=spf1 include:mx include:a include:ptr include:include:google.com,servers.mcsv.net include:~all" ~all
