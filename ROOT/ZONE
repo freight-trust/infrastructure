@@ -1,6 +1,6 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026862 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026868 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -47,3 +47,4 @@ google.mail.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0
 freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net ~all"
 discourse.freighttrust.com. 3600 IN A 34.125.241.47
 freighttrust.com. 3600 IN TXT "google-site-verification=BeCSYLIb_45be8kf_XL76nXxrJ9HFJsLS4KMY5pN9Dk"
+git.freighttrust.com. 3600 IN TXT "https://github.com/freight-trust"
