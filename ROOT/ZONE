@@ -1,6 +1,6 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026858 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026862 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -45,3 +45,5 @@ as2.freighttrust.com. 3600 IN CNAME freighttrust.netlify.app.
 google.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB"
 google.mail.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzlNBpq5XNyjZJGz4ko/YnA2t7lBxk1vx+rfGaQVPnnM0tMI4/dRfiTQwGTLYN7B9Bz26WJlttp69JkpKysZLE5jr7cqNEpLlEtlYdOTcg5vJA8b59D2IhuGA8Skck3CYg9PtQe2NbKElhkHuJ/JnlA2FDaMr+LGNgnUK3NsotWFCAHpEM58mIWGoF2D9bkjn4IDFD/AWFft6zhra/vrRoWDtq+il1VpRlKyrJQ941wnrK844V2I9E1I9uSLi/Deb9Odb4pOMH/84QPkN6SfICIM0TkW7w+KeTzu/1o54aUMo6yKcS0SAUizdGsVoUNp5lwCEnB5tGs144cD2sMUT/QIDAQAB"
 freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net ~all"
+discourse.freighttrust.com. 3600 IN A 34.125.241.47
+freighttrust.com. 3600 IN TXT "google-site-verification=BeCSYLIb_45be8kf_XL76nXxrJ9HFJsLS4KMY5pN9Dk"
