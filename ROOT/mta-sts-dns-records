@@ -1,0 +1,7 @@
+_mta-sts.your-domain IN TXT "v=STSv1; id=id-value"
+_smtp._tls.your-domain IN TXT "v=TLSRPTv1; rua=reporting-address"
+
+
+example:
+_mta-sts.your-domain IN TXT "v=STSv1; id=20190811231231"
+_smtp._tls.your-domain IN TXT "v=TLSRPTv1; rua=mailto:tls-reports@your-domain"

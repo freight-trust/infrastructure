@@ -1,6 +1,10 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
+<<<<<<< HEAD
 freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026818 86400 7200 604800 300
+=======
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026858 86400 7200 604800 300
+>>>>>>> fd6ccf8f6dbd638346795dfe8b41a08f893c0a17
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -14,12 +18,10 @@ freighttrust.com. 3600 IN MX 5 alt1.aspmx.l.google.com.
 freighttrust.com. 3600 IN MX 5 alt2.aspmx.l.google.com.
 freighttrust.com. 3600 IN MX 10 alt3.aspmx.l.google.com.
 freighttrust.com. 3600 IN MX 10 alt4.aspmx.l.google.com.
-freighttrust.com. 3600 IN SPF v=spf1 a include:v=spf1 include:a include:include:include:_spf.google.com,include:, include:include:servers.mcsv.net include:include:~all include:~all ~all
-freighttrust.com. 3600 IN TXT "v=spf1 a include:v=spf1 include:a include:include:include:_spf.google.com,include:, include:include:servers.mcsv.net include:include:~all include:~all ~all"
-freighttrust.com. 3600 IN CAA 0 iodef ""mailto:admin@freighttrust.com""
-freighttrust.com. 3600 IN CAA 0 issue ""sectigo.com""
-freighttrust.com. 3600 IN CAA 0 issue ""letsencrypt.org""
-freighttrust.com. 3600 IN CAA 0 issue ""digicert.com""
+freighttrust.com. 3600 IN CAA 0 iodef "mailto:admin@freighttrust.com"
+freighttrust.com. 3600 IN CAA 0 issue "sectigo.com"
+freighttrust.com. 3600 IN CAA 0 issue "letsencrypt.org"
+freighttrust.com. 3600 IN CAA 0 issue "*.netlify.app"
 freighttrust.com. 3600 IN DNSKEY 257 3 8 AwEAAdWfFNsNcvnWwJb1sG3Tv9dosdPHO8a8zq8vcjkAPXzVEnq1leMqCe/L3dKNEFMKFeXDO7CUaRvAZL/ypfsQxKfrzFQ1BJV2HjiQcIdmCVHw4W/hCvGPcpYstJ33O4kSwA6BMrceVBLVkojrY/V5v7shopsxIeRypQVHiTF+0eDLmolLtl2O3kWWVL3yQ7g4cYPuTHaCg8Dg7gUozgEbDs8=
 freighttrust.com. 3600 IN DNSKEY 256 3 8 AwEAAeJP4+f+fo31LbaxPYs1iIfkl9ZvPqyBGTewZ2M801S1R49lOl/mqkveL+NeXuU2Rr10Rb9LxNKF6HDuVkENmKkll3o1Kz/o13WtnOeuNtkAXoSa05pBas2MMZZxtDk9Xjq+kqEJDe/MEbe9cVONkzdtyATDJ7YncM6rtAKM7YbJ
 freighttrust.com. 3600 IN CDNSKEY 257 3 8 AwEAAdWfFNsNcvnWwJb1sG3Tv9dosdPHO8a8zq8vcjkAPXzVEnq1leMqCe/L3dKNEFMKFeXDO7CUaRvAZL/ypfsQxKfrzFQ1BJV2HjiQcIdmCVHw4W/hCvGPcpYstJ33O4kSwA6BMrceVBLVkojrY/V5v7shopsxIeRypQVHiTF+0eDLmolLtl2O3kWWVL3yQ7g4cYPuTHaCg8Dg7gUozgEbDs8=
@@ -41,3 +43,12 @@ _dmarc.freighttrust.com. 3600 IN TXT "v=DMARC1; p=none; pct=100; rua=mailto:re+m
 pm-bounces.freighttrust.com. 3600 IN CNAME pm.mtasv.net.
 groups.freighttrust.com. 3600 IN CNAME ghs.googlehosted.com.
 google._domainkey.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB"
+<<<<<<< HEAD
+=======
+as2.freighttrust.com. 3600 IN CNAME freighttrust.netlify.app.
+*.freighttrust.com. 3600 IN CAA 0 issuewild "letsencrypt.org"
+*.freighttrust.com. 3600 IN CAA 0 issue "netlify.app"
+google.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB"
+google.mail.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzlNBpq5XNyjZJGz4ko/YnA2t7lBxk1vx+rfGaQVPnnM0tMI4/dRfiTQwGTLYN7B9Bz26WJlttp69JkpKysZLE5jr7cqNEpLlEtlYdOTcg5vJA8b59D2IhuGA8Skck3CYg9PtQe2NbKElhkHuJ/JnlA2FDaMr+LGNgnUK3NsotWFCAHpEM58mIWGoF2D9bkjn4IDFD/AWFft6zhra/vrRoWDtq+il1VpRlKyrJQ941wnrK844V2I9E1I9uSLi/Deb9Odb4pOMH/84QPkN6SfICIM0TkW7w+KeTzu/1o54aUMo6yKcS0SAUizdGsVoUNp5lwCEnB5tGs144cD2sMUT/QIDAQAB"
+freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net ~all"
+>>>>>>> fd6ccf8f6dbd638346795dfe8b41a08f893c0a17
