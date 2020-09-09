@@ -25,9 +25,13 @@
   </a>
 </p>
 
-<a href="https://check-your-website.server-daten.de/?q=freighttrust.com" target="_blank">Check this Site: freighttrust.com</a>
+<align=center><a href="https://check-your-website.server-daten.de/?q=freighttrust.com" target="_blank">Check this Site: freighttrust.com</a></align>
 
 <br>
+
+### Audits
+
+See [dns audit](#) in releases
 
 
 [ref/component](/com/freighttrust) <br />
