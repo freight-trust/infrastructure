@@ -25,7 +25,7 @@
   </a>
 </p>
 
-<align=center><a href="https://check-your-website.server-daten.de/?q=freighttrust.com" target="_blank">Check this Site: freighttrust.com</a></align>
+<p align="center"><a href="https://check-your-website.server-daten.de/?q=freighttrust.com" target="_blank">Check this Site: freighttrust.com</a></p>
 
 <br>
 
