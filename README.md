@@ -25,12 +25,22 @@
   </a>
 </p>
 
+<a href="https://check-your-website.server-daten.de/?q=freighttrust.com" target="_blank">Check this Site: freighttrust.com</a>
+
 <br>
 
 
 [ref/component](/com/freighttrust) <br />
 [policy/component](/com/freighttrust/policy) <br />
 [schemas/component](/com/freighttrust/schemas) <br />
+
+
+Relevant Documentation
+
+[dnsimple reference](https://developer.dnsimple.com/v2/certificates/)
+[netlify](https://docs.netlify.com/domains-https/https-ssl/)
+[SSL Mate](https://sslmate.com/caa/)
+
 
 ### Structure 
 * ROOT
@@ -55,6 +65,16 @@
 	- [defects](/security/defects.md)
 	- [document retention policy](/security/document-retention-policy.md)
 	- [pki](/security/pki.md)
+
+## Known Issues
+
+> SSL 
+
+### Cerbot / Nginx
+
+a `wontfix issue` [https://github.com/certbot/certbot/issues/5764](https://github.com/certbot/certbot/issues/5764)
+see this github issue [7275#issue-473726625](https://github.com/certbot/certbot/issues/7275#issue-473726625)
+`certbot renew -a webroot -w /var/www/html --dry-run`
 
 
 ### Support or Contact
