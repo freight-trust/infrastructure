@@ -1,6 +1,6 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026878 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026892 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
@@ -40,8 +40,14 @@ google._domainkey.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqh
 *.freighttrust.com. 3600 IN CAA 0 issue "netlify.app"
 google.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB"
 google.mail.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzlNBpq5XNyjZJGz4ko/YnA2t7lBxk1vx+rfGaQVPnnM0tMI4/dRfiTQwGTLYN7B9Bz26WJlttp69JkpKysZLE5jr7cqNEpLlEtlYdOTcg5vJA8b59D2IhuGA8Skck3CYg9PtQe2NbKElhkHuJ/JnlA2FDaMr+LGNgnUK3NsotWFCAHpEM58mIWGoF2D9bkjn4IDFD/AWFft6zhra/vrRoWDtq+il1VpRlKyrJQ941wnrK844V2I9E1I9uSLi/Deb9Odb4pOMH/84QPkN6SfICIM0TkW7w+KeTzu/1o54aUMo6yKcS0SAUizdGsVoUNp5lwCEnB5tGs144cD2sMUT/QIDAQAB"
-freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net ~all"
+freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net include:mailgun.org ~all"
 discourse.freighttrust.com. 3600 IN A 34.125.241.47
 freighttrust.com. 3600 IN TXT "google-site-verification=BeCSYLIb_45be8kf_XL76nXxrJ9HFJsLS4KMY5pN9Dk"
 git.freighttrust.com. 3600 IN TXT "https://github.com/freight-trust"
 discourse.freighttrust.com. 3600 IN CAA 0 issue "letsencrypt.org"
+; testing.freighttrust.com. 3600 IN URL http://ec2-52-53-248-65.us-west-1.compute.amazonaws.com:8080
+mg.freighttrust.com. 3600 IN TXT "v=spf1 include:mailgun.org ~all"
+mailo._domainkey.mg.freighttrust.com. 3600 IN TXT "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqXe37r0+J93daW0X7p/JclXaOfAbZZtUW16urhB44wNtOxRH9/dh3QbfValWEfXmIczhaDdzEFL7INUNoJ8Icjuo1VddP/Ptx07DStHQN5uTV4J3Ujj7jiNdf4qsFVz4gkTX22H0nCtOf1WWTJEEATcP97p2pkX7f/9FcV5Djz9iktLGNbAJyXyNhYt2PHBdFkCTHxzxz0uAxOxVfWx7ZSNvHkqJYc/xeRHAhqeP9R/k+NnE8fW6hfOppOXkFgFa4zu1mrv/ZSU4622ksX9dnZbytmRVn8/Kh8U5cShcjQaYxGNiAyXXbGaisfl3kxPVYucRLizW57diqYjqvXZSzQIDAQAB"
+mg.freighttrust.com. 3600 IN MX 0 mxa.mailgun.org.
+mg.freighttrust.com. 3600 IN MX 0 mxb.mailgun.org.
+email.mg.freighttrust.com. 3600 IN CNAME mailgun.org.
