@@ -1,10 +1,11 @@
 $ORIGIN freighttrust.com.
 $TTL 1h
-freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026878 86400 7200 604800 300
+freighttrust.com. 3600 IN SOA ns1.dnsimple.com. admin.dnsimple.com. 1595026945 86400 7200 604800 300
 freighttrust.com. 3600 IN NS ns1.dnsimple.com.
 freighttrust.com. 3600 IN NS ns2.dnsimple.com.
 freighttrust.com. 3600 IN NS ns3.dnsimple.com.
 freighttrust.com. 3600 IN NS ns4.dnsimple.com.
+_16454e3f6ca060de3fc2b0c46b2d1334.freighttrust.com. 120 IN NS 30086.dns-approval.sslmate.com.
 mail.freighttrust.com. 3600 IN CNAME ghs.googlehosted.com.
 calendar.freighttrust.com. 3600 IN CNAME ghs.googlehosted.com.
 freighttrust.com. 3600 IN MX 1 aspmx.l.google.com.
@@ -40,8 +41,34 @@ google._domainkey.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqh
 *.freighttrust.com. 3600 IN CAA 0 issue "netlify.app"
 google.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsb3e+8C8ZJ13lPRUvQ7z9cCWzP8q4z2G+dAtWRGCGb3prIqujR9j/3GK3tcipn+FriCkVlvUw26n8Q2yUDKcrCZ8+3YcvsyXB39qbsV1gudoTFxnmRXgD7HFuPo+cOWbIFwyqP+EQaU6R2v3bkD73f9fI+/dLnUbjLnFhM8OZ4scKMU4XVWEX13paoq6NADGsMD/13XuPV44dk2eunCeLQv8+7I2WBPhHLZ9XAic2g5gKpbnatsWlDVADreHvogWvTst3Evuv7dzPcXO5fC61ah2UzN2jkHQp/pZaAyjFqhIYMFaELBgnJw/sAtEeXIICq+N/8/zIxoTSQMgq8bxEwIDAQAB"
 google.mail.freighttrust.com. 3600 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzlNBpq5XNyjZJGz4ko/YnA2t7lBxk1vx+rfGaQVPnnM0tMI4/dRfiTQwGTLYN7B9Bz26WJlttp69JkpKysZLE5jr7cqNEpLlEtlYdOTcg5vJA8b59D2IhuGA8Skck3CYg9PtQe2NbKElhkHuJ/JnlA2FDaMr+LGNgnUK3NsotWFCAHpEM58mIWGoF2D9bkjn4IDFD/AWFft6zhra/vrRoWDtq+il1VpRlKyrJQ941wnrK844V2I9E1I9uSLi/Deb9Odb4pOMH/84QPkN6SfICIM0TkW7w+KeTzu/1o54aUMo6yKcS0SAUizdGsVoUNp5lwCEnB5tGs144cD2sMUT/QIDAQAB"
-freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net ~all"
-discourse.freighttrust.com. 3600 IN A 34.125.241.47
+freighttrust.com. 3600 IN TXT "v=spf1 mx a include:google.com include:servers.mcsv.net include:mailgun.org ~all"
 freighttrust.com. 3600 IN TXT "google-site-verification=BeCSYLIb_45be8kf_XL76nXxrJ9HFJsLS4KMY5pN9Dk"
 git.freighttrust.com. 3600 IN TXT "https://github.com/freight-trust"
 discourse.freighttrust.com. 3600 IN CAA 0 issue "letsencrypt.org"
+; testing.freighttrust.com. 3600 IN URL http://ec2-52-53-248-65.us-west-1.compute.amazonaws.com:8080
+mg.freighttrust.com. 3600 IN TXT "v=spf1 include:mailgun.org ~all"
+mailo._domainkey.mg.freighttrust.com. 3600 IN TXT "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqXe37r0+J93daW0X7p/JclXaOfAbZZtUW16urhB44wNtOxRH9/dh3QbfValWEfXmIczhaDdzEFL7INUNoJ8Icjuo1VddP/Ptx07DStHQN5uTV4J3Ujj7jiNdf4qsFVz4gkTX22H0nCtOf1WWTJEEATcP97p2pkX7f/9FcV5Djz9iktLGNbAJyXyNhYt2PHBdFkCTHxzxz0uAxOxVfWx7ZSNvHkqJYc/xeRHAhqeP9R/k+NnE8fW6hfOppOXkFgFa4zu1mrv/ZSU4622ksX9dnZbytmRVn8/Kh8U5cShcjQaYxGNiAyXXbGaisfl3kxPVYucRLizW57diqYjqvXZSzQIDAQAB"
+mg.freighttrust.com. 3600 IN MX 0 mxa.mailgun.org.
+mg.freighttrust.com. 3600 IN MX 0 mxb.mailgun.org.
+email.mg.freighttrust.com. 3600 IN CNAME mailgun.org.
+forums.freighttrust.com. 3600 IN CAA 0 issue "letsencrypt.org"
+mx._domainkey.discourse.freighttrust.com. 3600 IN TXT "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmw0NCvCSNSZzjNc2DiArBbxvyQk3vsVTZQWWHtxqc+ULEG7iwsHbvd4y5IPX6EuM9Fok7TKIWgBtBPIko5TuxFq0FFyrf6lOLlhfu5Ek8hCg8sA4/hivz6WXtOO41zUQ41iXm3fq63tZUJd8bGxC/Fxj9/t9pyNooEXcKG3ZnDWocp6Eaizg8IjOYzS4BoZjsouiU21O8gE1LmXP1sPonkscxibkG4qGuW6vg3zParnyV2ApSk8Mp3AOAkkWmjRdtMfhWAgp9gRlOVfkNeWU+T8YFT44Ox1df0weFbfKhVLqnxpeqaj6H339D5T8kL0lKYGLUGvLywCrYzg45jxvDQIDAQAB"
+discourse.freighttrust.com. 3600 IN TXT "v=spf1 include:mailgun.org ~all"
+discourse.freighttrust.com. 3600 IN MX 0 mxa.mailgun.org.
+discourse.freighttrust.com. 3600 IN MX 0 mxb.mailgun.org.
+email.discourse.freighttrust.com. 3600 IN CNAME mailgun.org.
+info.freighttrust.com. 600 IN A 34.106.38.63
+discourse.freighttrust.com. 3600 IN A 34.106.38.63
+_acme-challenge.auth.freighttrust.com. 1 IN TXT "OcZfZkcqGdgvDvfG-GbWxAUKJ69Rv_g7SgTH7r6Hvto"
+_acme-challenge.keycloak.freighttrust.com. 1 IN TXT "1dUNHSGOthrtOPbhCXkdpw-RHaj9dscD1oM2EtMX_HI"
+*.freighttrust.com. 3600 IN CAA 0 issue "sectigo.com"
+mg.freighttrust.com. 3600 IN A 35.247.32.40
+_acme-challenge.auth.freighttrust.com. 1 IN TXT "R_Ggh-Nvie8RLNAwc_sFY6whoeTHZiMCqcoA0hC9O0I"
+_acme-challenge.keycloak.freighttrust.com. 1 IN TXT "-OONjGTpahFCzoOa89vxTXeZrh318eN7cDd1dGYIy_o"
+_acme-challenge.auth.freighttrust.com. 1 IN TXT "sR6m5CII7MuNCnMGnYhvsD7smHP2xqlxk2-NrPjqiIA"
+invoice.freighttrust.com. 3600 IN A 35.162.43.79
+; docs.freighttrust.com. 3600 IN URL https://ft-docs.netlify.app
+gitlab.freighttrust.com. 3600 IN A 34.94.91.179
+bintray.freighttrust.com. 3600 IN A 35.199.34.2
+logs.freighttrust.com. 3600 IN A 34.94.145.135
+eth.freighttrust.com. 3600 IN CNAME cloudflare-eth.com.
