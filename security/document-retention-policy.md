@@ -47,14 +47,7 @@ Therefore, this policy is part of a company-wide system for the review,
 retention, and destruction of records Freight Trust creates or receives
 in connection with the business it conducts.
 
-# REASONS FOR POLICY
-
-Counsel may consider revising the clause above to include mention of any
-state or local law for the jurisdiction(s) where this policy will be
-used. Also consider adding examples of records that are specific to the
-company’s industry and workplace.
-
-## Types of Documents
+### Types of Documents
 
 This policy explains the differences among records, disposable
 information, and confidential information belonging to others.
@@ -160,12 +153,12 @@ or retaliation for reporting incidents of inappropriate conduct of any
 kind, pursuing any record destruction claim, or cooperating in related
 investigations.
 
-# MANDATORY COMPLIANCE
+## Mandatory Compliance
 
-It is important to remind all employees that retaliation of any kind,
-including for reporting any type of violation of a policy, is strictly
-prohibited. For more information on retaliation generally and how to
-prevent it, see Practice Note, Retaliation.
+> It is important to remind all employees that retaliation of any kind,
+> including for reporting any type of violation of a policy, is strictly
+> prohibited. For more information on retaliation generally and how to
+> prevent it, see Practice Note, Retaliation.
 
 ## Records Management Department and Records Management Officer
 
